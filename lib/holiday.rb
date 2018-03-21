@@ -49,18 +49,16 @@ def all_supplies_in_holidays(holiday_hash)
   #   Fourth Of July: Fireworks, BBQ
   # etc.
   holiday_hash.each do |name, season_hash|
-    binding.pry
-    snake_case_to_string(name)
-    puts name + ":"
+    puts .to_s.capitalize + ":"
     season_hash.each do |holiday_sym, holiday_arr|
-      puts "  #{holiday_sym.to_s.capitalize}: #{holiday_arr.join ", "}"
+      puts "  #{snake_case_to_capitalized_string(holiday_sym)}: #{holiday_arr.join ", "}"
     end
   end
 end
 
-def snake_case_to_string(name)
+def snake_case_to_capitalized_string(name)
   name_arr = name.split("_")
-  caps = name_arr.map { |x| x.capitalize }
+  caps = name_arr.map { |w| w.capitalize }
   caps.join(" ")
 end
 
