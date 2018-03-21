@@ -58,7 +58,7 @@ def all_supplies_in_holidays(holiday_hash)
 end
 
 def snake_case_to_string(name)
-  name.join(", ")
+  name.join(" ")
 end
 
 def all_holidays_with_bbq(holiday_hash)
