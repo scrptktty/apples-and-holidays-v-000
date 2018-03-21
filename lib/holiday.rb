@@ -50,7 +50,7 @@ def all_supplies_in_holidays(holiday_hash)
   # etc.
   holiday_hash.each do |name, season_hash|
     snake_case_to_string(name)
-    puts name.to_s.capitalize! + ":"
+    puts name + ":"
     season_hash.each do |holiday_sym, holiday_arr|
       puts "  #{holiday_sym.to_s.capitalize}: #{holiday_arr.join ", "}"
     end
