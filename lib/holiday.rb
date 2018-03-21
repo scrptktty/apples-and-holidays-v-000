@@ -58,7 +58,8 @@ def all_supplies_in_holidays(holiday_hash)
 end
 
 def snake_case_to_string(name)
-  name.join(" ")
+  name_arr = name.split("_")
+  name_arr.map { |x| x.capitalize}
 end
 
 def all_holidays_with_bbq(holiday_hash)
