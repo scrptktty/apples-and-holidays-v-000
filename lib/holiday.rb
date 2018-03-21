@@ -49,6 +49,7 @@ def all_supplies_in_holidays(holiday_hash)
   #   Fourth Of July: Fireworks, BBQ
   # etc.
   holiday_hash.each do |name, season_hash|
+    binding.pry
     snake_case_to_string(name)
     puts name + ":"
     season_hash.each do |holiday_sym, holiday_arr|
