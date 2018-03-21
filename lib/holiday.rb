@@ -59,7 +59,7 @@ end
 
 def snake_case_to_capitalized_string(name)
   string_name = name.to_s
-  name_arr = name.split("_")
+  name_arr = string_name.split("_")
   caps = name_arr.map { |w| w.capitalize }
   caps.join(" ")
 end
