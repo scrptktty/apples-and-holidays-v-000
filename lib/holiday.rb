@@ -1,22 +1,6 @@
 require 'pry'
 
 def second_supply_for_fourth_of_july(holiday_hash)
-  # given that holiday_hash looks like this:
-  # {
-  #   :winter => {
-  #     :christmas => ["Lights", "Wreath"],
-  #     :new_years => ["Party Hats"]
-  #   },
-  #   :summer => {
-  #     :fourth_of_july => ["Fireworks", "BBQ"]
-  #   },
-  #   :fall => {
-  #     :thanksgiving => ["Turkey"]
-  #   },
-  #   :spring => {
-  #     :memorial_day => ["BBQ"]
-  #   }
-  # }
   return holiday_supplies[:summer][:fourth_of_july][1]
 end
 
@@ -24,12 +8,10 @@ def add_supply_to_winter_holidays(holiday_hash, supply)
   holiday_hash[:winter].each { |_, supplies| supplies << supply }
 end
 
-
 def add_supply_to_memorial_day(holiday_hash, supply)
   holiday_hash[:spring][:memorial_day] << supply
 end
 
-#
 def add_new_holiday_with_supplies(holiday_hash, season_name, holiday_name, supply_array)
   season_hash = holiday_hash[season_name]
   season_hash[holiday_name] = supply_array
@@ -57,7 +39,7 @@ def snake_case_to_capitalized_string(name)
 end
 
 def all_holidays_with_bbq(holiday_hash)
-  # return an array of holiday names (as symbols) where supply lists
-  # include the string "BBQ"
-
+  holiday_hash.each do |name, season_hash|
+    season_hash.each do |holiday_sym, holiday_arr|
+      binding.pry
 end
