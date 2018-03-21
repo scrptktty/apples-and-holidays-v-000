@@ -58,6 +58,7 @@ def all_supplies_in_holidays(holiday_hash)
 end
 
 def snake_case_to_capitalized_string(name)
+  name.to_s
   name_arr = name.split("_")
   caps = name_arr.map { |w| w.capitalize }
   caps.join(" ")
