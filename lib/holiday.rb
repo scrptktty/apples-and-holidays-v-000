@@ -61,7 +61,6 @@ def snake_case_to_string(name)
   name_arr = name.split("_")
   caps = name_arr.map { |x| x.capitalize }
   caps.join(" ")
-  return name
 end
 
 def all_holidays_with_bbq(holiday_hash)
